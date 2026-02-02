@@ -101,7 +101,12 @@ const Navbar = () => {
                         </a>
                     ))}
 
-                    <button className="bg-black cursor-pointer text-white px-8 py-2.5 rounded-full transition-all duration-500">
+                    <button onClick={() => {
+                            navigate('/apartments')
+                            setIsMenuOpen(false)
+                            window.scrollTo(0, 0)
+                        }}
+                    className="bg-black cursor-pointer text-white px-8 py-2.5 rounded-full transition-all duration-500">
                        View Apartments
                     </button>
                 </div>
