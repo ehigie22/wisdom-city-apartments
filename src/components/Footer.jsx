@@ -61,7 +61,6 @@ const Footer = () => {
   </p>
 </div>
 
-
                 <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">
                     {linkSections.map((section, index) => (
                         <div key={index}>
@@ -109,7 +108,7 @@ const Footer = () => {
                 </div>
             </div>
             <p className="py-4 text-center text-sm md:text-base text-gray-500/80">
-                Copyright 2026 © <a href="#">TranquilStay</a> All Right Reserved.
+                Copyright 2026 © <a href="#">WisdomCityHomes&Apartments</a> All Right Reserved.
             </p>
         </div>
   )
