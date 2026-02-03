@@ -27,6 +27,7 @@ import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
 import regImage from './regImage.png'
+import aboutImg from './aboutImg.jpg'
 import addIcon from "./addIcon.svg";
 import dashboardIcon from "./dashboardIcon.svg";
 import listIcon from "./listIcon.svg";
@@ -73,6 +74,12 @@ export const assets = {
     poolimg,
     tabletennisimg,
     loungeimg,
+
+    roomImg1,
+    roomImg2,
+    roomImg3,
+    roomImg4,
+    aboutImg
 }
 
 // Facility Icon
