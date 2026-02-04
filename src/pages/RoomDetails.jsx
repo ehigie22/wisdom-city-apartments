@@ -39,12 +39,6 @@ const RoomDetails = () => {
         </h1>
       </div>
 
-      {/* Room Address */}
-      <div className='flex items-center gap-1 text-gray-500 mt-2'>
-        <img src={assets.locationIcon} alt="location-icon" />
-        <span>{apartment.address}</span>
-      </div>
-
       {/* Room Images */}
       <div className='flex flex-col lg:flex-row mt-6 gap-6'>
         <div className='lg:w-1/2 w-full'>
@@ -86,10 +80,9 @@ const RoomDetails = () => {
           </div>
         </div>
 
-        {/* Room Price */}
-        <p className='text-2xl font-medium'>
+        {/* <p className='text-2xl font-medium'>
           ₦{apartment.pricePerNight.toLocaleString()}/night
-        </p>
+        </p> */}
         <div className='mt-6 md:mt-0'>
           <button onClick={() => setShowBooking(true)}
           type='submit' className=' px-8 py-4 text-sm text-3xl border

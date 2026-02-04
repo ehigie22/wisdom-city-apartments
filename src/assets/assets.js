@@ -37,6 +37,7 @@ import totalRevenueIcon from "./totalRevenueIcon.svg";
 import poolimg from './poolimg.jpg'
 import tabletennisimg from './tabletennisimg.jpg'
 import loungeimg from './loungeimg.jpg'
+import wifiImg from './wifiImg.jpg'
 
 
 export const assets = {
@@ -74,6 +75,7 @@ export const assets = {
     poolimg,
     tabletennisimg,
     loungeimg,
+    wifiImg,
 
     roomImg1,
     roomImg2,

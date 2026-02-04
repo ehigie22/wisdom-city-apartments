@@ -22,11 +22,11 @@ const HotelCard = ({ apartment }) => {
             {apartment.name}
           </p>
 
-          <div className="flex items-center justify-between mt-4">
+          {/* <div className="flex items-center justify-between mt-4">
             <span className="text-xl text-gray-800">
               ₦{apartment.pricePerNight.toLocaleString()}/night
             </span>
-          </div>
+          </div> */}
 
           {/* Book Button */}
           <div className="mt-5">

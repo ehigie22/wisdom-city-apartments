@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import { apartmentsDummyData, assets, facilityIcons } from '../assets/assets'
-import { useNavigate } from 'react-router-dom'
-import Booking from '../components/Booking'
+import React, { useState } from "react";
+import { apartmentsDummyData, facilityIcons } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
+import Booking from "../components/Booking";
 
 const AllApartments = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const [showBooking, setShowBooking] = useState(false)
-  const [selectedApartment, setSelectedApartment] = useState(null)
+  const [showBooking, setShowBooking] = useState(false);
+  const [selectedApartment, setSelectedApartment] = useState(null);
 
   return (
     <>
-      {/* Booking */}
+      {/* Booking modal */}
       {showBooking && selectedApartment && (
         <Booking
           apartment={selectedApartment}
@@ -19,86 +19,86 @@ const AllApartments = () => {
         />
       )}
 
-      <div className='flex flex-col-reverse lg:flex-row items-start justify-between
-        pt-28 md:pt-35 px-4 md:px-16 lg:px-24 xl:px-32'>
+      <div className="pt-28 md:pt-35 px-4 md:px-16 lg:px-24 xl:px-32">
+        <h1 className="font-playfair text-4xl md:text-[40px] mb-4">
+          Available Apartments
+        </h1>
 
-        <div>
-          <h1 className='font-playfair text-4xl md:text-[40px]'>
-            Available Apartments
-          </h1>
+        <p className="text-sm md:text-base text-gray-500/90 mb-8 max-w-174">
+          Take advantage of our limited-time offers and special packages to enhance your stay and create unforgettable memories.
+        </p>
 
-          <p className='text-sm md:text-base text-gray-500/90 mt-2 max-w-174'>
-            Take advantage of our limited-time offers and special packages
-            to enhance your stay and create unforgettable memories.
-          </p>
-
+        {/* Grid container */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {apartmentsDummyData.map((apartment) => (
             <div
               key={apartment.id}
-              className='flex flex-col md:flex-row items-start py-10 gap-6 border-b
-              border-gray-300 last:border-0'
+              className="flex flex-col items-start bg-white rounded-xl shadow-lg overflow-hidden"
             >
-              {/* Image */}
-              <img
+              {/* Image with hover overlay */}
+              <div
+                className="relative w-full cursor-pointer group"
                 onClick={() => {
-                  navigate(`/apartments/${apartment.id}`)
-                  window.scrollTo(0, 0)
+                  navigate(`/apartments/${apartment.id}`);
+                  window.scrollTo(0, 0);
                 }}
-                src={apartment.images[0]}
-                alt={apartment.name}
-                className='max-h-65 md:w-1/2 rounded-xl shadow-lg object-cover cursor-pointer'
-              />
+              >
+                <img
+                  src={apartment.images[0]}
+                  alt={apartment.name}
+                  className="w-full h-60 md:h-64 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-105"
+                />
 
-              {/* Details */}
-              <div className='md:w-1/2 flex flex-col gap-2'>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 
+                    flex items-center justify-center rounded-t-xl transition-all duration-300">
+                  <p className="text-white font-semibold text-lg md:text-xl">
+                    View Apartment
+                  </p>
+                </div>
+              </div>
+
+              {/* Details below image */}
+              <div className="p-4 w-full flex flex-col gap-3">
                 <p
-                  onClick={() => navigate(`/apartments/${apartment.id}`)}
-                  className='text-gray-800 text-3xl font-playfair cursor-pointer'
+                  onClick={() => {
+                    navigate(`/apartments/${apartment.id}`);
+                    window.scrollTo(0, 0);
+                  }}
+                  className="text-gray-800 text-xl md:text-2xl font-playfair cursor-pointer"
                 >
                   {apartment.name}
                 </p>
 
-                <div className='flex items-center gap-1 text-gray-500 mt-2 text-sm'>
-                  <img src={assets.locationIcon} alt="location-icon" />
-                  <span>{apartment.address}</span>
-                </div>
-
-                <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
+                {/* <div className="flex flex-wrap items-center gap-2 mt-2">
                   {apartment.amenities.map((item, index) => (
                     <div
                       key={index}
-                      className='flex items-center gap-2 px-3 py-2 rounded-lg bg-[#F5F5FF]/70'
+                      className="flex items-center gap-2 px-2 py-1 rounded-lg bg-[#F5F5FF]/70"
                     >
-                      <img className='w-5 h-5' src={facilityIcons[item]} alt={item} />
-                      <p className='text-xs'>{item}</p>
+                      <img className="w-4 h-4" src={facilityIcons[item]} alt={item} />
+                      <p className="text-xs">{item}</p>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
-                <p className='text-xl font-medium text-gray-700'>
-                  ₦{apartment.pricePerNight.toLocaleString()} / night
-                </p>
-
-                {/* Book Button */}
-                <div className='mt-4'>
-                  <button
-                    onClick={() => {
-                      setSelectedApartment(apartment)
-                      setShowBooking(true)
-                    }}
-                    className='px-6 py-2 text-sm border
-                    border-gray-300 rounded bg-[#FF6700]/80 text-white'
-                  >
-                    Book Now
-                  </button>
-                </div>
+                {/* Book button */}
+                <button
+                  onClick={() => {
+                    setSelectedApartment(apartment);
+                    setShowBooking(true);
+                  }}
+                  className="mt-3 px-4 py-2 text-sm border border-gray-300 rounded bg-[#FF6700]/80 text-white hover:bg-[#FF6700]/70 transition-colors"
+                >
+                  Book Now
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AllApartments
+export default AllApartments;
