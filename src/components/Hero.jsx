@@ -69,11 +69,10 @@ const Hero = () => {
   return (
     <div
       className="relative flex flex-col items-start justify-center
-      px-6 md:px-16 lg:px-24 xl:px-32
-      text-white h-screen
+    px-6 md:px-16 lg:px-24 xl:px-32
+     text-white h-screen
       bg-[url('/src/assets/heroImage.jpg')]
-      bg-no-repeat bg-cover bg-center
-      bg-fixed"
+      bg-no-repeat bg-cover bg-center"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
