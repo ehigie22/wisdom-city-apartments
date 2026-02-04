@@ -141,7 +141,6 @@ const Contact = () => {
             <input
               type="text"
               name="firstName"
-              placeholder="John"
               required
               className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800"
             />
@@ -154,7 +153,6 @@ const Contact = () => {
             <input
               type="text"
               name="lastName"
-              placeholder="Doe"
               required
               className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800"
             />
@@ -169,7 +167,6 @@ const Contact = () => {
           <input
             type="email"
             name="email"
-            placeholder="you@example.com"
             required
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-800"
           />
