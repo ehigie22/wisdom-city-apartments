@@ -29,7 +29,7 @@ const FeaturedApartments = () => {
           subTitle="Enjoy the perfect blend of style, comfort, and convenience with our selection of featured apartments."
         />
 
-        <div className="flex flex-wrap items-center justify-center gap-7 mt-18">
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-18">
           {apartmentsDummyData.slice(0, 4).map((apartment) => (
             <HotelCard
               key={apartment.id}

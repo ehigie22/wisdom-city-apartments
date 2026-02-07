@@ -22,10 +22,6 @@ import badgeIcon from './badgeIcon.svg'
 import menuIcon from './menuIcon.svg'
 import closeMenu from './closeMenu.svg'
 import guestsIcon from './guestsIcon.svg'
-import roomImg1 from './roomImg1.png'
-import roomImg2 from './roomImg2.png'
-import roomImg3 from './roomImg3.png'
-import roomImg4 from './roomImg4.png'
 import regImage from './regImage.png'
 import aboutImg from './aboutImg.jpg'
 import addIcon from "./addIcon.svg";
@@ -38,7 +34,26 @@ import poolimg from './poolimg.jpg'
 import tabletennisimg from './tabletennisimg.jpg'
 import loungeimg from './loungeimg.jpg'
 import wifiImg from './wifiImg.jpg'
-
+import room1a from './room1a.jpg'
+import room1b from './room1b.jpg'
+import room1c from './room1c.jpg'
+import room1d from './room1d.jpg'
+import room1e from './room1e.jpg'
+import room2a from './room2a.jpg'
+import room2b from './room2b.jpg'
+import room2c from './room2c.jpg'
+import room2d from './room2d.jpg'
+import room3a from './room3a.jpg'
+import room3b from './room3b.jpg'
+import room3c from './room3c.jpg'
+import room3d from './room3d.jpg'
+import room4a from './room4a.jpg'
+import room4b from './room4b.jpg'
+import room4c from './room4c.jpg'
+import room4d from './room4d.jpg'
+import room5a from './room5a.jpg'
+import room5b from './room5b.jpg'
+import room5c from './room5c.jpg'
 
 export const assets = {
     logo,
@@ -77,11 +92,29 @@ export const assets = {
     loungeimg,
     wifiImg,
 
-    roomImg1,
-    roomImg2,
-    roomImg3,
-    roomImg4,
-    aboutImg
+
+    aboutImg,
+    room1a,
+    room1b,
+    room1c,
+    room1d,
+    room1e,
+    room2a,
+    room2b,
+    room2c,
+    room2d,
+    room3a,
+    room3b,
+    room3c,
+    room3d,
+    room4a,
+    room4b,
+    room4c,
+    room4d,
+    room5a,
+    room5b,
+    room5c,
+
 }
 
 // Facility Icon
@@ -100,13 +133,13 @@ export const roomCommonData = [
     { icon: assets.heartIcon, title: "Smooth Check-In", description: "Simple, hassle-free check-in so you can settle in quickly and enjoy your stay." },
 ];
 
-// Hotel Dummy Data
-export const apartmentDummyData = {
-    "name": "Wisdom Homes and Apartments",
-    "address": " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
-    "contact": "+0123456789",
-    "city": "Benin City",
-}
+// // Hotel Dummy Data
+// export const apartmentDummyData = {
+//     "name": "Wisdom Homes and Apartments",
+//     "address": " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
+//     "contact": "+0123456789",
+//     "city": "Benin City",
+// }
 
 // Rooms Dummy Data
 export const apartmentsDummyData = [
@@ -117,7 +150,7 @@ export const apartmentsDummyData = [
     address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
     pricePerNight: 250000,
     amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg1, roomImg2, roomImg3, roomImg4] 
+    images: [room1b, room1a, room1c, room1e] 
     },
     {
     id: 2,
@@ -125,7 +158,7 @@ export const apartmentsDummyData = [
     address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
     pricePerNight: 250000,
     amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg4, roomImg3, roomImg2, roomImg1]
+    images: [room2a, room2b, room2c, room2d]
     },
     {
     id: 3,
@@ -133,7 +166,7 @@ export const apartmentsDummyData = [
     address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
     pricePerNight: 200000,
     amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg3, roomImg2, roomImg4]
+    images: [room3a, room3b, room3c, room3d]
     },
     {
     id: 4,
@@ -141,7 +174,7 @@ export const apartmentsDummyData = [
     address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
     pricePerNight: 200000,
     amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg2, roomImg2]
+    images: [room4a, room4b, room4c, room4d]
     },
     {
     id: 5,
@@ -149,7 +182,7 @@ export const apartmentsDummyData = [
     address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
     pricePerNight: 200000,
     amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg1, roomImg2]
+    images: [room5a, room5b, room5c, room1e]
     },
     {
     id: 6,
@@ -157,25 +190,7 @@ export const apartmentsDummyData = [
     address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
     pricePerNight: 200000,
     amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg1, roomImg2]
-    },
-        {
-    id: 7,
-    name: "2 Bedroom Apartment",
-    address: " 5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City, Edo State.",
-    pricePerNight: 200000,
-    amenities: ["Pool Access", "Free WiFi", "Room Service"],
-    images: [roomImg1, roomImg2]
+    images: [room5b, room5a, room5c, room1e]
     },
 
 ]
-
-// --------- SVG code for Book Icon------
-/* 
-const BookIcon = ()=>(
-    <svg className="w-4 h-4 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
-    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4" />
-</svg>
-)
-
-*/

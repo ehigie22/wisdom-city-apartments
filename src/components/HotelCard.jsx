@@ -41,7 +41,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// Animation for each card
+
 const cardReveal = {
   hidden: { opacity: 0, y: 20 },
   visible: {

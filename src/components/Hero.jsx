@@ -63,7 +63,7 @@ const Hero = () => {
       });
     }, 40); // typing speed
 
-    return () => clearInterval(interval); // cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
@@ -75,7 +75,7 @@ const Hero = () => {
       bg-no-repeat bg-cover bg-center"
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/65"></div>
 
       {/* Content */}
       <div className="relative z-10">
