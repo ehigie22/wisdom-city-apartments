@@ -30,7 +30,7 @@ import listIcon from "./listIcon.svg";
 import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
-import poolimg from './poolimg.jpg'
+import poolimg from './poolimg.jpeg'
 import tabletennisimg from './tabletennisimg.jpg'
 import loungeimg from './loungeimg.jpg'
 import wifiImg from './wifiImg.jpg'
