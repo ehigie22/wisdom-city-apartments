@@ -216,7 +216,7 @@ const Footer = () => {
               Our Location
             </h3>
             <p className="mb-2 text-sm text-gray-500">
-              5 Prince Imafidonmorogbe Ezomo Ave, Oka, Benin City
+              5 Prince Imafidon Omorogbe Ezomo Ave, Off Oyaide Street, Off Airport Road, Oko, Benin City, Edo State, Nigeria
             </p>
 
             <a
