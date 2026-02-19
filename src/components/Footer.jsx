@@ -220,14 +220,14 @@ const Footer = () => {
             </p>
 
                 <a
-                  href="https://www.google.com/maps?q=5+Prince+Imafidon+Omorogbe+Ezomo+Avenue,+off+Oyaide+Street,+off+Airport+Road,+Oko,+Benin+City,+Edo"
+                  href="https://maps.app.goo.gl/HEze87tPgvX1XqnC7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block rounded-lg overflow-hidden border border-gray-300 hover:opacity-90 transition"
                 >
                   <iframe
                     title="Wisdom City Location"
-                    src="https://www.google.com/maps?q=5+Prince+Imafidon+Omorogbe+Ezomo+Avenue,+off+Oyaide+Street,+off+Airport+Road,+Oko,+Benin+City,+Edo&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.700310247196!2d5.595292!3d6.303051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d300691d64fb%3A0x2dc1e50b7c06238!2sWisdom%20City%20Homes%20and%20Apartments!5e0!3m2!1sen!2sng!4v1771515029979!5m2!1sen!2sng" 
                     className="w-full h-36"
                     loading="lazy"
                   />
