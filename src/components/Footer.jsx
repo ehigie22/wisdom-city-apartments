@@ -219,19 +219,20 @@ const Footer = () => {
               5 Prince Imafidon Omorogbe Ezomo Ave, Off Oyaide Street, Off Airport Road, Oko, Benin City, Edo State, Nigeria
             </p>
 
-            <a
-              href="https://www.google.com/maps?q=5+Prince+Imafidonmorogbe+Ezomo+Ave,+Oka,+Benin+City,+Edo,+Nigeria"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-lg overflow-hidden border border-gray-300 hover:opacity-90 transition"
-            >
-              <iframe
-                title="Wisdom City Location"
-                src="https://www.google.com/maps?q=5+Prince+Imafidonmorogbe+Ezomo+Ave,+Oka,+Benin+City,+Edo,+Nigeria&output=embed"
-                className="w-full h-36"
-                loading="lazy"
-              />
-            </a>
+                <a
+                  href="https://www.google.com/maps?q=5+Prince+Imafidon+Omorogbe+Ezomo+Avenue,+off+Oyaide+Street,+off+Airport+Road,+Oko,+Benin+City,+Edo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-lg overflow-hidden border border-gray-300 hover:opacity-90 transition"
+                >
+                  <iframe
+                    title="Wisdom City Location"
+                    src="https://www.google.com/maps?q=5+Prince+Imafidon+Omorogbe+Ezomo+Avenue,+off+Oyaide+Street,+off+Airport+Road,+Oko,+Benin+City,+Edo&output=embed"
+                    className="w-full h-36"
+                    loading="lazy"
+                  />
+                </a>
+
           </div>
         </div>
       </div>
