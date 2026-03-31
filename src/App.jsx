@@ -8,13 +8,14 @@ import RoomDetails from './pages/RoomDetails'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
+import { HelmetProvider } from "react-helmet-async";
+
 
 const App = () => {
   return (
-    <div>
+     <HelmetProvider>
+          <div>
       <Navbar />
-
-      {/* 👇 THIS FIXES THE SCROLL ISSUE */}
       <ScrollToTop />
 
       <div className='min-h-[70vh]'>
@@ -29,6 +30,8 @@ const App = () => {
 
       <Footer />
     </div>
+     </HelmetProvider>
+
   )
 }
 

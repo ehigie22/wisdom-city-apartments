@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { apartmentsDummyData, facilityIcons } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import Booking from "../components/Booking";
+import { Helmet } from "react-helmet-async";
 
 const AllApartments = () => {
   const navigate = useNavigate();
@@ -11,6 +12,28 @@ const AllApartments = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Luxury Short-let & Affordable Apartments in Benin City | Wisdom City Homes</title>
+        <meta
+          name="description"
+          content="Book luxury short-let apartments in Airport Road, Benin City. Fully furnished units with comfort, security, WIFI and 24/7 power."
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": apartmentsDummyData.map((apartment, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "url": `${window.location.origin}/apartments/${apartment.name.toLowerCase().replace(/\s+/g, '-')}`,
+              "name": apartment.name,
+              "image": apartment.images[0],
+              "description": `Luxury short-let apartment in Benin City. ${apartment.name} is fully furnished with comfort, security, and 24/7 power.`
+            }))
+          })}
+        </script>
+      </Helmet>
       {/* Booking modal */}
       {showBooking && selectedApartment && (
         <Booking
@@ -21,11 +44,13 @@ const AllApartments = () => {
 
       <div className="pt-28 md:pt-35 px-4 md:px-16 lg:px-24 xl:px-32">
         <h1 className="font-playfair text-4xl md:text-[40px] mb-4">
-          Available Apartments
+           Luxury Short-let Apartments in Benin City
         </h1>
 
         <p className="text-sm md:text-base text-gray-500/90 mb-8 max-w-174">
-          Take advantage of our limited-time offers and special packages to enhance your stay and create unforgettable memories.
+            Book our luxury short-let apartments located on Airport Road, Benin City.
+            Enjoy fully furnished units, 24/7 power supply, security, and comfort — perfect
+            for short stays, business trips, and vacations.
         </p>
 
         {/* Grid container */}
@@ -35,7 +60,7 @@ const AllApartments = () => {
               key={apartment.id}
               className="flex flex-col items-start bg-white rounded-xl shadow-lg overflow-hidden"
             >
-              {/* Image with hover overlay */}
+              
               <div
                 className="relative w-full cursor-pointer group"
                 onClick={() => {
@@ -45,10 +70,10 @@ const AllApartments = () => {
               >
                 <img
                   src={apartment.images[0]}
-                  alt={apartment.name}
+                  alt={`${apartment.name} in Benin City`}
                   className="w-full h-60 md:h-64 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-105"
                 />
-
+                
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 
                     flex items-center justify-center rounded-t-xl transition-all duration-300">

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { apartmentsDummyData, assets, facilityIcons, roomCommonData } from '../assets/assets'
 import { useParams } from 'react-router-dom'
 import Booking from '../components/Booking'
+import { Helmet } from "react-helmet-async";
 
 
 const RoomDetails = () => {
@@ -24,6 +25,26 @@ const RoomDetails = () => {
 
   return apartment && (
     <>
+    <Helmet>
+      <title>{apartment.name} | Luxury Short-let in Benin City | Wisdom City Homes</title>
+      <meta
+        name="description"
+        content={`Book ${apartment.name}, a luxury short-let apartment in Benin City. Fully furnished with 24/7 power, security, and comfort.`}
+      />
+      
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Apartment",
+            "name": "${apartment.name}",
+            "image": "${apartment.images[0]}",
+            "description": "Luxury short-let apartment in Benin City, fully furnished with comfort and security.",
+            "url": "${window.location.origin}/apartments/${apartment.name.toLowerCase().replace(/\\s+/g, '-')}"
+          }
+        `}
+      </script>
+    </Helmet>
       {showBooking && (
   <Booking
     apartment={apartment}
@@ -44,7 +65,7 @@ const RoomDetails = () => {
         <div className='lg:w-1/2 w-full'>
           <img
             src={mainImage}
-            alt="Room"
+            alt={`${apartment.name} in Benin City`}
             className='w-full rounded-xl shadow-lg object-cover'
           />
         </div>
@@ -54,7 +75,7 @@ const RoomDetails = () => {
             <img
               key={index}
               src={image}
-              alt="Room thumbnail"
+              alt={`${apartment.name} thumbnail ${index + 1}`}
               onClick={() => setMainImage(image)}
               className={`w-full rounded-xl shadow-md object-cover cursor-pointer
                 ${mainImage === image ? 'outline outline-2 outline-orange-500' : ''}`}
@@ -69,20 +90,8 @@ const RoomDetails = () => {
           <h1 className='text-3xl md:text-4xl font-playfair'>
             Experience Luxury Like Never Before
           </h1>
-
-          {/* <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
-            {apartment.amenities.map((item, index) => (
-              <div key={index} className='flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100'>
-                <img className='w-5 h-5' src={facilityIcons[item]} alt={item} />
-                <p className='text-xs'>{item}</p>
-              </div>
-            ))}
-          </div> */}
         </div>
 
-        {/* <p className='text-2xl font-medium'>
-          ₦{apartment.pricePerNight.toLocaleString()}/night
-        </p> */}
         <div className='mt-6 md:mt-0'>
           <button onClick={() => setShowBooking(true)}
           type='submit' className=' px-8 py-4 text-sm text-3xl border

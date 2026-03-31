@@ -1,11 +1,37 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
+    <>
+     <Helmet>
+        <title>About Wisdom City Homes | Trusted Apartment Provider in Benin City</title>
+        <meta
+          name="description"
+          content="Learn more about Wisdom City Homes, a trusted provider of quality apartments in Benin City. Modern, fully furnished short-let apartments with comfort and security."
+        />
+
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Wisdom City Homes",
+              "url": "${window.location.origin}/about",
+              "logo": "${assets.logo}",
+              "description": "Wisdom City Homes offers modern, fully furnished short-let apartments in Benin City with exceptional comfort, security, and hospitality.",
+              "sameAs": [
+                "https://www.instagram.com/wisdomcityhomesbenin",
+                "https://www.tiktok.com/@wisdomcityhomesbenin"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
     <div>
 
-      {/* ABOUT HEADER */}
       <div className="text-center pt-28 md:pt-35 px-4 ">
           <h1 className='font-playfair text-4xl md:text-[40px]'>
            About Us
@@ -160,6 +186,8 @@ const About = () => {
       </div>
 
     </div>
+    </>
+   
   );
 };
 
