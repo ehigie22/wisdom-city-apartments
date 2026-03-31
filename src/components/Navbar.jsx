@@ -137,7 +137,6 @@ const Navbar = () => {
         isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg" : ""
       }`}
     >
-      {/* Logo */}
       <Link to="/" className="flex items-center gap-3">
         <img
           src={assets.logo}
